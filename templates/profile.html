@@ -1,0 +1,34 @@
+<h1>User Profile</h1>
+
+<table border="1">
+    <tr>
+        <th>Field</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>{{ user[0] }}</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>{{ user[1] }}</td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>{{ user[2] }}</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>{{ user[3] }}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{ user[4] }}</td>
+    </tr>
+    <tr>
+            <td>Word Count</td>
+            <td>{{ user[5] }}</td>
+        </tr>
+</table>
+<a href="{{ url_for('download', username=user[0]) }}">Download file</a><br>
+<a href="{{ url_for('logout') }}">Logout</a>
